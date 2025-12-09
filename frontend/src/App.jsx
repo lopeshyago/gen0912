@@ -30,32 +30,33 @@ import RoadmapBacklogPage from "./components/RoadmapBacklogPage";
 import PrototypePage from "./components/PrototypePage";
 import PRDFinalPage from "./components/PRDFinalPage";
 import LaunchPage from "./components/LaunchPage";
+import Step1Form from "./components/Step1Form";
 
 const stepData = {
   "contexto-problema": {
     id: "contexto-problema",
     title: "Contexto e Problema",
     description:
-      "Identificação inicial do problema e da oportunidade de mercado.",
+      "IdentificaÃ§Ã£o inicial do problema e da oportunidade de mercado.",
     iaMessage:
-      "E disse a IA: que haja contexto! ✨\n\nPara começarmos, me conte sobre o problema que seu produto busca resolver e o contexto atual do mercado. Qual a dor principal do seu usuário?",
+      "E disse a IA: que haja contexto! â¨\n\nPara comeÃ§armos, me conte sobre o problema que seu produto busca resolver e o contexto atual do mercado. Qual a dor principal do seu usuÃ¡rio?",
     placeholder: "Descreva o problema e o contexto...",
     tasks: [
       { id: 1, text: "Definir o problema central" },
-      { id: 2, text: "Analisar o cenário atual do mercado" },
-      { id: 3, text: "Identificar a dor principal do usuário" },
-      { id: 4, text: "Pesquisar soluções existentes" },
+      { id: 2, text: "Analisar o cenÃ¡rio atual do mercado" },
+      { id: 3, text: "Identificar a dor principal do usuÃ¡rio" },
+      { id: 4, text: "Pesquisar soluÃ§Ãµes existentes" },
     ],
   },
   discovery: {
     id: "discovery",
     title: "Discovery",
-    description: "Exploração do problema e levantamento de hipóteses iniciais",
+    description: "ExploraÃ§Ã£o do problema e levantamento de hipÃ³teses iniciais",
     iaMessage:
-      "Hora do Discovery! 🔍\n\nAgora que entendemos o problema, vamos explorar as oportunidades. Quais são as hipóteses iniciais que você tem para a solução? Quais funcionalidades você imagina?",
-    placeholder: "Compartilhe suas hipóteses e ideias de funcionalidades...",
+      "Hora do Discovery! ð\n\nAgora que entendemos o problema, vamos explorar as oportunidades. Quais sÃ£o as hipÃ³teses iniciais que vocÃª tem para a soluÃ§Ã£o? Quais funcionalidades vocÃª imagina?",
+    placeholder: "Compartilhe suas hipÃ³teses e ideias de funcionalidades...",
     tasks: [
-      { id: 1, text: "Levantar hipóteses de solução" },
+      { id: 1, text: "Levantar hipÃ³teses de soluÃ§Ã£o" },
       { id: 2, text: "Brainstorm de funcionalidades" },
       { id: 3, text: "Mapear stakeholders" },
       { id: 4, text: "Definir escopo inicial" },
@@ -65,94 +66,94 @@ const stepData = {
     id: "swot-csd",
     title: "SWOT e CSD",
     component: SWOTCSDPage,
-    description: "Análise de Forças, Fraquezas, Oportunidades, Ameaças e Matriz CSD (Certezas, Suposições, Dúvidas).",
-    iaMessage: "Análise Estratégica! 📊\n\nVamos consolidar o entendimento do projeto com uma análise SWOT e a Matriz CSD. Quais são os pontos fortes e fracos do seu produto? O que é certeza, suposição e dúvida?",
-    placeholder: "Preencha a análise SWOT e a Matriz CSD...",
+    description: "AnÃ¡lise de ForÃ§as, Fraquezas, Oportunidades, AmeaÃ§as e Matriz CSD (Certezas, SuposiÃ§Ãµes, DÃºvidas).",
+    iaMessage: "AnÃ¡lise EstratÃ©gica! ð\n\nVamos consolidar o entendimento do projeto com uma anÃ¡lise SWOT e a Matriz CSD. Quais sÃ£o os pontos fortes e fracos do seu produto? O que Ã© certeza, suposiÃ§Ã£o e dÃºvida?",
+    placeholder: "Preencha a anÃ¡lise SWOT e a Matriz CSD...",
   },
   personas: {
     id: "personas",
     title: "Personas",
     component: PersonasPage,
-    description: "Criação de Personas para representar os usuários-alvo.",
-    iaMessage: "Conheça seu Usuário! 🧑‍💻\n\nDescreva suas Personas. Quem são eles? Quais são seus objetivos, frustrações e como seu produto se encaixa na vida deles?",
+    description: "CriaÃ§Ã£o de Personas para representar os usuÃ¡rios-alvo.",
+    iaMessage: "ConheÃ§a seu UsuÃ¡rio! ð§âð»\n\nDescreva suas Personas. Quem sÃ£o eles? Quais sÃ£o seus objetivos, frustraÃ§Ãµes e como seu produto se encaixa na vida deles?",
     placeholder: "Crie suas Personas...",
   },
   "pesquisa-usuarios": {
     id: "pesquisa-usuarios",
-    title: "Pesquisa de Usuário",
+    title: "Pesquisa de UsuÃ¡rio",
     component: UserResearchPage,
-    description: "Planejamento e execução da pesquisa de usuário.",
-    iaMessage: "Pesquisa em Ação! 📝\n\nQuais métodos de pesquisa você usará? Quais perguntas você precisa responder para validar suas hipóteses?",
+    description: "Planejamento e execuÃ§Ã£o da pesquisa de usuÃ¡rio.",
+    iaMessage: "Pesquisa em AÃ§Ã£o! ð\n\nQuais mÃ©todos de pesquisa vocÃª usarÃ¡? Quais perguntas vocÃª precisa responder para validar suas hipÃ³teses?",
     placeholder: "Planeje sua pesquisa...",
   },
   "validacao-hipoteses": {
     id: "validacao-hipoteses",
-    title: "Teste de Hipóteses",
+    title: "Teste de HipÃ³teses",
     component: HypothesisTestingPage,
-    description: "Definição e teste das hipóteses de solução.",
-    iaMessage: "Hora de Testar! ✅\n\nQuais hipóteses você vai testar? Como você vai medir o sucesso ou o fracasso de cada teste?",
-    placeholder: "Defina seus testes de hipóteses...",
+    description: "DefiniÃ§Ã£o e teste das hipÃ³teses de soluÃ§Ã£o.",
+    iaMessage: "Hora de Testar! â\n\nQuais hipÃ³teses vocÃª vai testar? Como vocÃª vai medir o sucesso ou o fracasso de cada teste?",
+    placeholder: "Defina seus testes de hipÃ³teses...",
   },
   "features-priorizacao": {
     id: "features-priorizacao",
-    title: "Funcionalidades e Prioriza��o",
+    title: "Funcionalidades e Priorização",
     component: FeaturesPage,
-    description: "Definição e priorização das funcionalidades do produto.",
-    iaMessage: "O que o Produto Faz? ⚙️\n\nListe e priorize as funcionalidades. Use métodos como MoSCoW ou Kano. Quais são as essenciais (Must Have)?",
+    description: "DefiniÃ§Ã£o e priorizaÃ§Ã£o das funcionalidades do produto.",
+    iaMessage: "O que o Produto Faz? âï¸\n\nListe e priorize as funcionalidades. Use mÃ©todos como MoSCoW ou Kano. Quais sÃ£o as essenciais (Must Have)?",
     placeholder: "Liste e priorize as funcionalidades...",
   },
   "user-stories-fluxos": {
     id: "user-stories-fluxos",
     title: "User Stories e Fluxos",
     component: UserStoriesFlowsPage,
-    description: "Criação de User Stories e mapeamento dos fluxos de usuário.",
-    iaMessage: "Como o Usuário Interage? 🗺️\n\nEscreva as User Stories no formato 'Como um [tipo de usuário], eu quero [objetivo], para que [benefício]'. Mapeie os fluxos principais.",
+    description: "CriaÃ§Ã£o de User Stories e mapeamento dos fluxos de usuÃ¡rio.",
+    iaMessage: "Como o UsuÃ¡rio Interage? ðºï¸\n\nEscreva as User Stories no formato 'Como um [tipo de usuÃ¡rio], eu quero [objetivo], para que [benefÃ­cio]'. Mapeie os fluxos principais.",
     placeholder: "Crie as User Stories e os fluxos...",
   },
   "criterios-metricas": {
     id: "criterios-metricas",
-    title: "Critérios e Métricas",
+    title: "CritÃ©rios e MÃ©tricas",
     component: CriteriaMetricsPage,
-    description: "Definição dos critérios de sucesso e métricas (KPIs).",
-    iaMessage: "O que é Sucesso? 🌟\n\nDefina os critérios de sucesso para o lançamento e as métricas (KPIs) que você usará para medir o desempenho do produto.",
-    placeholder: "Defina critérios e métricas...",
+    description: "DefiniÃ§Ã£o dos critÃ©rios de sucesso e mÃ©tricas (KPIs).",
+    iaMessage: "O que Ã© Sucesso? ð\n\nDefina os critÃ©rios de sucesso para o lanÃ§amento e as mÃ©tricas (KPIs) que vocÃª usarÃ¡ para medir o desempenho do produto.",
+    placeholder: "Defina critÃ©rios e mÃ©tricas...",
   },
   "roadmap-backlog": {
     id: "roadmap-backlog",
     title: "Roadmap e Backlog",
     component: RoadmapBacklogPage,
-    description: "Criação do Roadmap e do Backlog do produto.",
-    iaMessage: "Onde Vamos? 🛣️\n\nOrganize as funcionalidades no Roadmap (curto, médio e longo prazo) e detalhe o Backlog para as próximas iterações.",
+    description: "CriaÃ§Ã£o do Roadmap e do Backlog do produto.",
+    iaMessage: "Onde Vamos? ð£ï¸\n\nOrganize as funcionalidades no Roadmap (curto, mÃ©dio e longo prazo) e detalhe o Backlog para as prÃ³ximas iteraÃ§Ãµes.",
     placeholder: "Crie o Roadmap e o Backlog...",
   },
   prototipo: {
     id: "prototipo",
-    title: "Protótipo",
+    title: "ProtÃ³tipo",
     component: PrototypePage,
-    description: "Criação e teste do protótipo de alta fidelidade.",
-    iaMessage: "Mãos à Obra! 🎨\n\nDescreva o protótipo. Quais são as telas principais? Quais ferramentas você usou? Quais foram os resultados dos testes de usabilidade?",
-    placeholder: "Descreva o protótipo e os testes...",
+    description: "CriaÃ§Ã£o e teste do protÃ³tipo de alta fidelidade.",
+    iaMessage: "MÃ£os Ã  Obra! ð¨\n\nDescreva o protÃ³tipo. Quais sÃ£o as telas principais? Quais ferramentas vocÃª usou? Quais foram os resultados dos testes de usabilidade?",
+    placeholder: "Descreva o protÃ³tipo e os testes...",
   },
   "prd-final": {
     id: "prd-final",
     title: "PRD Final",
     component: PRDFinalPage,
     description: "Documento de Requisitos de Produto (PRD) finalizado.",
-    iaMessage: "O Documento Mestre! 📜\n\nRevise e finalize o PRD. Ele deve conter todas as informações necessárias para o time de desenvolvimento.",
+    iaMessage: "O Documento Mestre! ð\n\nRevise e finalize o PRD. Ele deve conter todas as informaÃ§Ãµes necessÃ¡rias para o time de desenvolvimento.",
     placeholder: "Finalize o PRD...",
   },
   lancamento: {
     id: "lancamento",
-    title: "Lançamento",
+    title: "LanÃ§amento",
     component: LaunchPage,
-    description: "Plano de lançamento e estratégia Go-to-Market.",
-    iaMessage: "Pronto para o Mundo! 🚀\n\nQual é o seu plano de lançamento? Qual a estratégia de marketing e vendas? Como você vai medir o sucesso pós-lançamento?",
-    placeholder: "Crie o plano de lançamento...",
+    description: "Plano de lanÃ§amento e estratÃ©gia Go-to-Market.",
+    iaMessage: "Pronto para o Mundo! ð\n\nQual Ã© o seu plano de lanÃ§amento? Qual a estratÃ©gia de marketing e vendas? Como vocÃª vai medir o sucesso pÃ³s-lanÃ§amento?",
+    placeholder: "Crie o plano de lanÃ§amento...",
   },
   // Adicionar dados para outras etapas aqui
 };
 
-// Componente principal da aplicação
+// Componente principal da aplicaÃ§Ã£o
 function AppContent() {
   const { isAuthenticated, isLoading, user, login, register, logout } = useAuth();
   const PUBLIC_PAGES = ["login", "register", "forgot-password"];
@@ -191,7 +192,7 @@ function AppContent() {
     // Verificar hash inicial
     handleHashChange();
 
-    // Escutar mudanças no hash
+    // Escutar mudanÃ§as no hash
     window.addEventListener("hashchange", handleHashChange);
 
     return () => {
@@ -199,7 +200,7 @@ function AppContent() {
     };
   }, [isAuthenticated]);
 
-  // Redirecionar para login se não autenticado
+  // Redirecionar para login se nÃ£o autenticado
   useEffect(() => {
     if (!isLoading && !isAuthenticated && !PUBLIC_PAGES.includes(activePage)) {
       setActivePage("login");
@@ -209,7 +210,7 @@ function AppContent() {
     }
   }, [isAuthenticated, isLoading, activePage]);
 
-  // Quando autenticar, levar usuário para o dashboard caso esteja em páginas públicas
+  // Quando autenticar, levar usuÃ¡rio para o dashboard caso esteja em pÃ¡ginas pÃºblicas
   useEffect(() => {
     if (!isLoading && isAuthenticated && PUBLIC_PAGES.includes(activePage)) {
       setActivePage("dashboard");
@@ -287,13 +288,13 @@ function AppContent() {
             <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
           </div>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">GenesiX</h2>
-          <p className="text-gray-600">Carregando sua experiência...</p>
+          <p className="text-gray-600">Carregando sua experiÃªncia...</p>
         </div>
       </div>
     );
   }
 
-  // Páginas de autenticação (sem layout principal)
+  // PÃ¡ginas de autenticaÃ§Ã£o (sem layout principal)
   if (['login', 'register', 'forgot-password'].includes(activePage)) {
     return (
       <div>
@@ -316,7 +317,7 @@ function AppContent() {
     );
   }
 
-  // Layout principal da aplicação (apenas para usuários autenticados)
+  // Layout principal da aplicaÃ§Ã£o (apenas para usuÃ¡rios autenticados)
   return (
     <div className="flex h-screen bg-gray-50 text-gray-900">
       <Header
@@ -359,10 +360,7 @@ function AppContent() {
         {activePage === "profile" && <UserProfilePage />}
         {activePage === "settings" && <SettingsPage />}
         {activePage === "contexto-problema" && (
-          <StepPage
-            stepData={stepData["contexto-problema"]}
-            onAdvanceStep={() => handleNavigate("discovery")}
-          />
+          <Step1Form onAdvanceStep={() => handleNavigate("discovery")} />
         )}
         {activePage === "discovery" && (
           <StepPage
